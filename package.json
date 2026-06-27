@@ -1,0 +1,23 @@
+{
+  "name": "board-adventure",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently \"npm:dev:api\" \"npm:dev:web\"",
+    "dev:api": "node server/index.js",
+    "dev:web": "vite --host 127.0.0.1",
+    "start": "node server/index.js",
+    "build": "vite build",
+    "test": "node --test server/*.test.js"
+  },
+  "dependencies": {
+    "@vitejs/plugin-basic-ssl": "^2.1.0",
+    "better-sqlite3": "^11.9.1",
+    "concurrently": "^9.1.2",
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "vite": "^6.2.0"
+  },
+  "devDependencies": {}
+}
